@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Iwin - Utilities",
+  "description": "Công cụ tổng hợp",
+  "version": "1.0",
+  "action": {
+    "default_icon": "/assets/images/icon.png",
+    "default_popup": "./pages/popup/popup.html"
+  },
+  "icons": {
+    "512": "./assets/images/icon-removebg.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "cookies",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "/assets/scripts/bootstrap.min.js"
+      ],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
